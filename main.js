@@ -5,6 +5,7 @@ var app = new Vue({
         align: 'v bind align',
         center: 'center',
         google: 'https://www.google.com/',
-        blank: '_blank'
+        blank: '_blank',
+        boolean: false
     }
 });
