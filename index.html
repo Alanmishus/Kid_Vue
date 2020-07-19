@@ -13,9 +13,23 @@
         {{ msg }}
         <h4 v-bind:align="center">{{ align }}</h4>
         <a v-bind:href="google" v-bind:target="blank">Google</a>
-        <span v-if="boolean">v-if boolean</span>
+        <span v-if="boolean">v-if true</span>
+        <span v-else="boolean">v-else false</span>
     </div>
 
+    <div id="app2">
+        <div v-for="p in products">
+            <h3>{{ p.name }}</h3><hr>
+            <h4>price: ${{ p.price }}</h4>
+        </div>
+    </div>
+
+    <div id="app3">
+        <button v-for="p in pageConfig" @click="switchPage(p.code)">{{ p.btn }}</button>
+        <div v-for="p in pageConfig" >
+            <div v-if="page == p.code">{{ p.msg }}</div>
+        </div>
+    </div>
 
     <!-- JS套件 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
